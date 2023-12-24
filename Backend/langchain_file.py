@@ -1,7 +1,7 @@
 #load data 
+import os
 import random 
 import itertools
-import os 
 import warnings
 from typing import List
 
@@ -15,17 +15,15 @@ from langchain.chains import RetrievalQA
 from langchain.evaluation.qa import QAEvalChain
 from langchain.prompts import PromptTemplate
 
-import json
+os.getenv()
 
 
-os.environ["OPENAI_API_KEY"] = "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"
 def load_data(filepath:str):
     with open(filepath,'r') as f:
         text_data=' '.join(f.read().splitlines())
     return text_data
 
-#text=load_data('../example.txt')
-#print(len(text))
+
 
 def generate_eval(text: str, num_questions: int, chunk: int):
     """
@@ -50,12 +48,7 @@ def generate_eval(text: str, num_questions: int, chunk: int):
     eval_set_full = list(itertools.chain.from_iterable(eval_set))
     return eval_set_full
 
-#eval_set=generate_eval(text,num_questions=3,chunk=3000)  
 
-#jsonString=json.dumps(eval_set)
-#jsonFile = open("data.json", "w")
-#jsonFile.write(jsonString)
-#jsonFile.close()
 
 
 def split_texts(text, chunk_size: int, overlap):
@@ -73,9 +66,7 @@ def split_texts(text, chunk_size: int, overlap):
     return split_text
 
 
-# Split text
-#splits = split_texts(text, chunk_size=1000, overlap=100)
-#model=ChatOpenAI(temperature=0)
+
 
 
 def make_retriever(splits, num_neighbors, _llm):
@@ -103,9 +94,7 @@ def make_retriever(splits, num_neighbors, _llm):
     retriever_obj = vector_store.as_retriever(k=num_neighbors)
     return retriever_obj
 
-# Make vector DB
-#num_neighbors=5
-#retriever = make_retriever(splits, num_neighbors, model)
+
 
 def make_chain(llm, retriever) -> RetrievalQA:
     """
@@ -119,10 +108,6 @@ def make_chain(llm, retriever) -> RetrievalQA:
                                         retriever=retriever,
                                         input_key="question")
     return qa
-
-
-# Make chain
-#qa_chain = make_chain(model, retriever)
 
 
 template = """You are a teacher grading a quiz. 
