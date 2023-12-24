@@ -1,0 +1,65 @@
+/* styles.css */
+input[type="text"] {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  width: 250px;
+  box-sizing: border-box;
+}
+
+/* styles.css */
+.bigTextbox {
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 18px;
+  width: 100%; /* Adjust to give some space on the sides */
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.coolInput {
+  padding: 10px;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 150px;
+}
+
+.coolInput:focus {
+  outline: none;
+  border-color: #2980b9;
+}
+
+/* Additional Styling for Displaying Answers */
+.answer {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.answer h3 {
+  margin-top: 0;
+}
