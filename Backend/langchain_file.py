@@ -15,7 +15,7 @@ from langchain.chains import RetrievalQA
 from langchain.evaluation.qa import QAEvalChain
 from langchain.prompts import PromptTemplate
 
-os.getenv()
+os.getenv('OPENAI_API_KEY')
 
 
 def load_data(filepath:str):
