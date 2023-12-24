@@ -9,7 +9,7 @@ The frontend part of the application is built using HTML, JavaScript, and CSS. I
 ### Files
 - `index.html`: Main HTML file containing the UI structure.
 - `styles.css`: CSS file for styling the UI components.
-- `script.js` (or `main.js`): JavaScript file handling user interactions, AJAX requests, and DOM manipulation.
+- `script.js`: JavaScript file handling user interactions, AJAX requests, and DOM manipulation.
 
 ### Usage
 1. Clone or download this repository.
@@ -25,7 +25,7 @@ The backend part of the application is built using Flask, a Python web framework
 
 ### Setup
 1. Ensure Python is installed on your machine.
-2. Install Flask using `pip install Flask`.
+2. Install requirements using `pip install -r requirements.txt`
 3. Run the Flask application by executing `python app.py` in the terminal.
 
 ### Endpoints
